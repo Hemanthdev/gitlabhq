@@ -301,7 +301,7 @@ gem 'sentry-raven', '~> 2.9'
 gem 'premailer-rails', '~> 1.10.3'
 
 # LabKit: Tracing and Correlation
-gem 'gitlab-labkit', '0.10.0'
+gem 'gitlab-labkit', '0.10.1'
 
 # I18n
 gem 'ruby_parser', '~> 3.8', require: false
@@ -456,9 +456,9 @@ group :ed25519 do
 end
 
 # Gitaly GRPC protocol definitions
-gem 'gitaly', '~> 1.86.0'
+gem 'gitaly', '~> 1.87.0'
 
-gem 'grpc', '~> 1.24.0'
+gem 'grpc', '~> 1.53.2'
 
 gem 'google-protobuf', '~> 3.8.0'
 
