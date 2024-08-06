@@ -458,7 +458,7 @@ end
 # Gitaly GRPC protocol definitions
 gem 'gitaly', '~> 1.86.0'
 
-gem 'grpc', '~> 1.24.0'
+gem 'grpc', '~> 1.58.3'
 
 gem 'google-protobuf', '~> 3.8.0'
 
