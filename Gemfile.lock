@@ -109,6 +109,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     babosa (1.0.2)
     base32 (0.3.2)
+    base64 (0.2.0)
     batch-loader (1.4.0)
     bcrypt (3.1.12)
     bcrypt_pbkdf (1.0.0)
@@ -130,7 +131,7 @@ GEM
       activemodel (>= 5.0)
     brakeman (4.2.1)
     browser (2.5.3)
-    builder (3.2.4)
+    builder (3.3.0)
     bullet (6.0.2)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
@@ -173,7 +174,7 @@ GEM
     concord (0.1.5)
       adamantium (~> 0.2.0)
       equalizer (~> 0.0.9)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.3.4)
     connection_pool (2.2.2)
     contracts (0.11.0)
     cork (0.3.0)
@@ -297,7 +298,8 @@ GEM
       faraday_middleware
       multi_json
     fast_blank (1.0.0)
-    fast_gettext (1.6.0)
+    fast_gettext (2.4.0)
+      prime
     ffaker (2.10.0)
     ffi (1.11.3)
     ffi-compiler (1.0.1)
@@ -353,6 +355,7 @@ GEM
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     formatador (0.2.5)
+    forwardable (1.3.3)
     fugit (1.2.1)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.1)
@@ -367,9 +370,9 @@ GEM
     gettext (3.2.9)
       locale (>= 2.0.5)
       text (>= 1.3.0)
-    gettext_i18n_rails (1.8.0)
+    gettext_i18n_rails (1.8.1)
       fast_gettext (>= 0.9.0)
-    gettext_i18n_rails_js (1.3.0)
+    gettext_i18n_rails_js (1.4.0)
       gettext (>= 3.0.2)
       gettext_i18n_rails (>= 0.7.1)
       po_to_json (>= 1.0.0)
@@ -411,8 +414,8 @@ GEM
       omniauth (~> 1.3)
       pyu-ruby-sasl (>= 0.0.3.3, < 0.1)
       rubyntlm (~> 0.5)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (1.1.0)
+      activesupport (>= 5.0)
     gon (6.2.0)
       actionpack (>= 3.0)
       multi_json
@@ -527,7 +530,7 @@ GEM
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
     httpclient (2.8.3)
-    i18n (1.8.2)
+    i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     i18n_data (0.8.0)
     icalendar (2.4.1)
@@ -535,7 +538,7 @@ GEM
     influxdb (0.2.3)
       cause
       json
-    invisible_captcha (0.12.1)
+    invisible_captcha (0.12.2)
       rails (>= 3.2.0)
     ipaddress (0.8.3)
     jaeger-client (0.10.0)
@@ -552,7 +555,7 @@ GEM
       character_set (~> 1.1)
       regexp_parser (~> 1.1)
       regexp_property_values (~> 0.3)
-    json (1.8.6)
+    json (2.7.2)
     json-jwt (1.11.0)
       activesupport (>= 4.2)
       aes_key_wrap
@@ -604,13 +607,13 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    locale (2.1.2)
+    locale (2.1.4)
     lograge (0.10.0)
       actionpack (>= 4)
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
-    loofah (2.4.0)
+    loofah (2.21.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lru_redux (1.1.0)
@@ -630,9 +633,11 @@ GEM
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
-    mimemagic (0.3.3)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_magick (4.9.5)
-    mini_mime (1.0.2)
+    mini_mime (1.1.5)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.3.1)
@@ -650,9 +655,9 @@ GEM
     net-ntp (2.1.3)
     net-ssh (5.2.0)
     netrc (0.11.0)
-    nio4r (2.5.2)
+    nio4r (2.7.3)
     no_proxy_fix (0.1.2)
-    nokogiri (1.10.7)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nokogumbo (1.5.0)
       nokogiri
@@ -755,9 +760,9 @@ GEM
     parslet (1.8.2)
     peek (1.1.0)
       railties (>= 4.0.0)
-    pg (1.2.2)
+    pg (1.5.7)
     png_quantizator (0.2.1)
-    po_to_json (1.0.1)
+    po_to_json (2.0.0)
       json (>= 1.6.0)
     premailer (1.11.1)
       addressable
@@ -766,6 +771,9 @@ GEM
     premailer-rails (1.10.3)
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
+    prime (0.1.2)
+      forwardable
+      singleton
     proc_to_ast (0.1.0)
       coderay
       parser
@@ -783,7 +791,7 @@ GEM
     public_suffix (4.0.3)
     pyu-ruby-sasl (0.0.3.3)
     raabro (1.1.6)
-    rack (2.0.7)
+    rack (2.0.9.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-attack (6.2.0)
@@ -800,8 +808,8 @@ GEM
       rack
     rack-proxy (0.6.0)
       rack
-    rack-test (1.1.0)
-      rack (>= 1.0, < 3)
+    rack-test (2.1.0)
+      rack (>= 1.3)
     rack-timeout (0.5.1)
     rails (6.0.2)
       actioncable (= 6.0.2)
@@ -822,11 +830,12 @@ GEM
       actionpack (>= 5.0.1.x)
       actionview (>= 5.0.1.x)
       activesupport (>= 5.0.1.x)
-    rails-dom-testing (2.0.3)
-      activesupport (>= 4.2.0)
+    rails-dom-testing (2.2.0)
+      activesupport (>= 5.0.0)
+      minitest
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.3.0)
-      loofah (~> 2.3)
+    rails-html-sanitizer (1.5.0)
+      loofah (~> 2.19, >= 2.19.1)
     rails-i18n (6.0.0)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 7)
@@ -926,11 +935,10 @@ GEM
     rspec-support (3.9.2)
     rspec_junit_formatter (0.4.1)
       rspec-core (>= 2, < 4, != 2.12.0)
-    rspec_profiling (0.0.5)
+    rspec_profiling (0.0.9)
       activerecord
-      pg
+      get_process_mem
       rails
-      sqlite3
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -1019,6 +1027,7 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.2)
+    singleton (0.2.0)
     sixarm_ruby_unaccent (1.2.0)
     slack-messenger (2.3.3)
     snowplow-tracker (0.6.1)
@@ -1027,14 +1036,14 @@ GEM
       activesupport (>= 4.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    sprockets (3.7.2)
+    sprockets (3.7.3)
+      base64
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    sprockets-rails (3.2.1)
-      actionpack (>= 4.0)
-      activesupport (>= 4.0)
+    sprockets-rails (3.4.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
     sshkey (2.0.0)
     stackprof (0.2.15)
     state_machines (0.5.0)
@@ -1073,7 +1082,7 @@ GEM
     truncato (0.7.11)
       htmlentities (~> 4.3.1)
       nokogiri (>= 1.7.0, <= 2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.11)
       thread_safe (~> 0.1)
     u2f (0.2.1)
     uber (0.1.0)
@@ -1129,9 +1138,9 @@ GEM
       hashdiff
     webpack-rails (0.9.11)
       railties (>= 3.2.0)
-    websocket-driver (0.7.1)
+    websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     wikicloth (0.8.1)
       builder
       expression_parser
@@ -1140,7 +1149,7 @@ GEM
     xml-simple (1.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.2.2)
+    zeitwerk (2.6.17)
 
 PLATFORMS
   ruby
@@ -1228,7 +1237,7 @@ DEPENDENCIES
   gemojione (~> 3.3)
   gettext (~> 3.2.2)
   gettext_i18n_rails (~> 1.8.0)
-  gettext_i18n_rails_js (~> 1.3)
+  gettext_i18n_rails_js (~> 1.3, >= 1.3.1)
   gitaly (~> 1.86.0)
   github-markup (~> 1.7.0)
   gitlab-chronic (~> 0.10.5)
@@ -1268,7 +1277,7 @@ DEPENDENCIES
   httparty (~> 0.16.4)
   icalendar
   influxdb (~> 0.2)
-  invisible_captcha (~> 0.12.1)
+  invisible_captcha (~> 0.12.2)
   jira-ruby (~> 1.7)
   js_regex (~> 3.1)
   json-schema (~> 2.8.0)
@@ -1353,7 +1362,7 @@ DEPENDENCIES
   rspec-retry (~> 0.6.1)
   rspec-set (~> 0.1.3)
   rspec_junit_formatter
-  rspec_profiling (~> 0.0.5)
+  rspec_profiling (~> 0.0.6)
   rubocop (~> 0.74.0)
   rubocop-performance (~> 1.4.1)
   rubocop-rspec (~> 1.37.0)
