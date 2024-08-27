@@ -8472,6 +8472,11 @@ orderedmap@^1.0.0:
   resolved "https://registry.yarnpkg.com/orderedmap/-/orderedmap-1.0.0.tgz#d90fc2ba1ed085190907d601dec6e6a53f8d41ba"
   integrity sha1-2Q/Cuh7QhRkJB9YB3sbmpT+NQbo=
 
+orderedmap@^2.0.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/orderedmap/-/orderedmap-2.1.1.tgz#61481269c44031c449915497bf5a4ad273c512d2"
+  integrity sha512-TvAWxi0nDe1j/rtMcWcIj94+Ffe6n7zhow33h40SKxmsmozs6dz/e+EajymfoFcHd7sxNn8yHM8839uixMOV6g==
+
 original@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/original/-/original-1.0.2.tgz#e442a61cffe1c5fd20a65f3261c26663b303f25f"
@@ -9254,6 +9259,13 @@ prosemirror-model@^1.0.0, prosemirror-model@^1.1.0, prosemirror-model@^1.6.4:
   integrity sha512-C2ALle8fZsAza+6stUF9Gv28jH9XtpNeczb33bowGlnb2cpNI4FZf1HHUyZjf6ou4cEvOlbt6fAYsT4NCKmlcQ==
   dependencies:
     orderedmap "^1.0.0"
+
+prosemirror-model@^1.22.1:
+  version "1.22.3"
+  resolved "https://registry.yarnpkg.com/prosemirror-model/-/prosemirror-model-1.22.3.tgz#52fdf5897f348b0f07f64bea89156d90afdf645a"
+  integrity sha512-V4XCysitErI+i0rKFILGt/xClnFJaohe/wrrlT2NSZ+zk8ggQfDH4x2wNK7Gm0Hp4CIoWizvXFP7L9KMaCuI0Q==
+  dependencies:
+    orderedmap "^2.0.0"
 
 prosemirror-schema-list@^1.0.1:
   version "1.0.1"
